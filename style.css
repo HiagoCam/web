@@ -1,0 +1,21 @@
+body{
+   background-color: rgb(235, 235, 235);
+   font-family: Arial, Helvetica, sans-serif;
+
+
+}
+h1{
+    margin: 0px 0;
+    color:#1E9585;
+    font-size: 29px;
+}
+#subtitulo{
+    font-size: 13px;
+    margin: 0px;
+    color: #9BABB7;
+}
+.caixa-login{
+
+
+
+};
