@@ -10,13 +10,14 @@ function entrar() {
 
 }
 
-function mostrar(chk){
+function mostrar(){
+    var cbx = document.querySelector("#cbx");
     var senha = document.querySelector("#senha");
-    if(chk.checked==false){
-        senha.type="password";
+    if(cbx.checked){
+        senha.type="text";
     }
     else{
-        senha.type="text";
+        senha.type="password";
     }
 
 }
