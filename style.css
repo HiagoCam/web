@@ -1,11 +1,12 @@
 body{
-   background-color: rgb(235, 235, 235);
+   background-color:white;
    font-family: Arial, Helvetica, sans-serif;
 
 
 }
 h1{
-    margin: 0px 0;
+    font-weight: bold;
+    margin: 0;
     color:#1E9585;
     font-size: 29px;
 }
@@ -14,8 +15,76 @@ h1{
     margin: 0px;
     color: #9BABB7;
 }
+
 .caixa-login{
+    margin: 85px 0 0 240px;
+    border: 1px solid #1E9585;
+    border-radius: 4px;
+    width: 420px;
+    height: 430px;
+    padding: 21px 0px;
+    text-align: center;
 
+}
 
+.inputs_login{
+    margin: 20px 0 0 110px;
+    border-radius: 2px;
+    border: 1px solid #9BABB7;
+    width: 200px;
+    height: 30px;
+    display: flex;
+}
 
-};
+.inputs_login input{
+    height: 28px;
+    border: none;
+    outline: none;
+    margin-left: 3px;
+    width: calc(100% - 16);
+}
+
+.inputs_login i{
+    margin-left: 5px;
+    line-height: 28px;
+}
+
+.inputs_senha{
+    margin: 20px 0 0 110px;
+    border-radius: 2px;
+    border: 1px solid #9BABB7;
+    width: 200px;
+    height: 30px;
+    display: flex;
+}
+.inputs_senha input{
+    height: 28px;
+    border: none;
+    outline: none;
+    margin-left: 3px;
+    width: calc(100%-16);
+}
+
+.inputs_senha i{
+    margin-left: 5px;
+    line-height: 28px;
+}
+
+.mostrar_senha{
+    margin-left: 215px;
+}
+
+.botao_logar{
+    background-color: #1E9585;
+    padding: 10px 40px;
+    font-size: 15px;
+    color: white;
+    border-radius: 23px;
+    border: 0;
+    margin: 2px;
+    font-weight: bold;
+    line-height: 15px;
+    height: 36px;
+    width: 132px;
+    outline: none;
+}

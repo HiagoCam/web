@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESPAÇO DO ESTUDANTE SESI-SENAI</title>
     <link rel="stylesheet" href="style.css">
+    <script src="funcoes.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="https://fiesc.com.br/sites/default/files/inline-images/Icone%20redes-06.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>    
-    <div class="sesisenai">
-        <img class="login__logo-img d-none d-sm-block" src="https://estudante.sesisenai.org.br/img/login/logo.svg?" alt="Espaço do Estudante SESI SENAI">
-      </div>
-      <h1>Bem-Vindo</h1>
-      <span id="subtitulo">ao Espaço do Estudante</span>
+    <div class="caixa-login">
+            <h1>Bem-Vindo</h1>
+            <span id="subtitulo">ao Espaço do Estudante</span>
+            <div class="inputs_login">
+                <i class="fa fa-user"></i>
+                <input type="text" class="txt_login" placeholder="Usuário" id="login">
+            </div>       
+            <div class="inputs_senha">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="txt_senha" placeholder="Senha" id="senha">
+            </div>        
+            <div class="mostrar_senha">
+                <input type="checkbox" onchange="mostrar()" id="cbx">   
+                <span id="subtitulo">Mostrar senha</span>
+            </div>
+                <button type=submit class="botao_logar" onclick="entrar()">Entrar</button>
+    </div>
 </body>
 </html>
