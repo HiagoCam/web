@@ -88,3 +88,13 @@ h1{
     width: 132px;
     outline: none;
 }
+
+.menu{
+    margin: 85px 0 0 240px;
+    width: 200;
+    height: 400;
+    border: 10px #1E9585;
+    border-radius: 3px;
+
+
+}
