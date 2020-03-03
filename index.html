@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESPAÇO DO ESTUDANTE SESI-SENAI</title>
     <link rel="stylesheet" href="style.css">
-    <script src="funcoes.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="https://fiesc.com.br/sites/default/files/inline-images/Icone%20redes-06.png" type="image/x-icon">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>    
     <img class="banner" src="https://estudante.sesisenai.org.br/img/login/logo.svg?" alt="Espaço do Estudante SESI SENAI">
     <div id="container">
         <div class="caixa-login">
-            <h1>Bem-Vindo</h1>
-            <span id="subtitulo">ao Espaço do Estudante</span>
+            <h1>{{titulo}}</h1>
+            <span id="subtitulo" :title="subtitulo" >{{subtitulo}}</span>
             <div class="inputs_login">
                 <i class="fa fa-user"></i>
-                <input type="text" class="txt_login" placeholder="Usuário" id="login">
+                <input type="text" class="txt_login" placeholder="Usuário" v-model="login">
             </div>       
             <div class="inputs_senha">
                 <i class="fa fa-lock"></i>
-                <input type="password" class="txt_senha" placeholder="Senha" id="senha" onkeydown="">
+                <input type="password" class="txt_senha" placeholder="Senha" onkeydown="" v-model="senha">
             </div>        
             <div class="mostrar_senha">
-                <input type="checkbox" onchange="mostrar()" id="cbx">   
+                <input type="checkbox" @change="mostrar">   
                 <span id="subtitulo">Mostrar senha</span>
             </div>
-            <button type=submit class="botao_logar" onclick="entrar()">Entrar</button>
+            <button type=submit class="botao_logar" @click="logar">Entrar</button>
+            <br>
+            <span style="color: red;">{{logado}}</span>
+
             <p>
             <span id="subtitulo">Esqueceu sua senha?</span>
             <p>
@@ -40,5 +43,41 @@
         </div>
     </div>
     
+    <script>
+        let container = new Vue({
+            el: "#container",
+            data: {
+                subtitulo : "ao espaço do estudante",
+                titulo : "Bem vindo",
+                login: '',
+                senha: '',
+                logado: ''
+            },
+            methods:{
+                logar: function(){
+                    if (this.login == "senai" && this.senha == "123") {
+                        this.logado = 'Logado com sucesso!';
+                        window.location.assign("dashboard.html");
+                    }
+                    else {
+                        this.logado = 'Login Inválido'
+                        alert("senha incorreta");
+                    }  
+                },
+                mostrar: function(){
+                if(cbx.checked){
+                    senha.type="text";
+                }
+                else{
+                    senha.type="password";
+                }
+                }
+            }
+        })
+
+    </script>
+
+
+
 </body>
 </html>

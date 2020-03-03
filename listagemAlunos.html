@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relação de alunos da turma técnico em desenvolvimento
+        de software - 20019/2020
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <input type="text" placeholder="Código" v-model="codg">
+    <input type="text" placeholder="Nome" v-model="name">
+    <button type="button" @click="salvar">salvar</button>
+    <div id="app">
+        <h1>Relação de Alunos</h1>
+        <table style="border: 1px solid grey;">
+            <thead style="background-color: #dcdcdc;">
+                <th style="text-align: center;">Código</th>
+                <th style="text-align: center;">Nome dos Alunos</th>
+            </thead>
+            <tbody>
+                    <tr v-for="aluno in alunos">
+                        <td style="text-align: center;">
+                            {{aluno.codigo}}
+                        </td>
+                        <td style="text-align: center;">
+                            {{aluno.nome}}
+                        </td>
+                    </tr>
+                </td>
+                </tbody>
+
+        </table>
+        <!--<ul>
+            <li v-for="aluno in alunos" style="list-style-type:armenian;">
+                    {{aluno.nome}}
+            </li>
+        </ul>
+    -->
+    </div>
+    <script>  
+        let app = new Vue({
+            el: "#app",
+            data:{
+                codg: '',
+                name: '',
+                alunos: [{
+                    codigo: 1,
+                    nome: "hiago"
+                },{
+                    codigo: 2,
+                    nome: "gabriel",
+                },{
+                    codigo: 3,
+                    nome: "borba"
+                },{
+                    codigo: 4,
+                    nome: "nathan"
+                },{
+                    codigo: 5,
+                    nome: "willian"
+                },{
+                    codigo: 6,
+                    nome: "milani"
+                }]
+            },
+                methods:{
+                    salvar: function() {
+                    this.alunos.push({codigo: this.codg,nome:this.name});
+                    this.alunos.refresh();
+                    alert("Adicionado com sucesso!");
+                }
+            }
+        })
+
+
+    </script>
+
+
+</body>
+</html>
