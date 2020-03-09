@@ -1,0 +1,17 @@
+[{
+"nome":"banana",
+"quantidade":"1 unidade",
+"preco":"10"
+},
+{
+    "nome":"mamão",
+    "quantidade":"2 unidade",
+    "preco":"8"
+},
+{
+    "nome":"uva",
+    "quantidade":"10 bago",
+    "preco":"5"
+}]
+
+

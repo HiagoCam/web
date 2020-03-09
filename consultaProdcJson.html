@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+
+<body>
+
+    <div id="consulta">
+        <button v-on:click="created">consultando</button>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Quantidade</th>
+                <th>Nome</th>
+            </thead>
+            <tbody>
+                <tr v-for="produto in produtos">
+                    <td style="text-align: center;">
+                        {{produto.id}}
+                    </td>
+                    <td style="text-align: center;">
+                        {{produto.quantity}}
+                    </td>
+                    <td style="text-align: center;">
+                        {{produto.name}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+    <script>
+        let consulta = new Vue({
+            el:"#consulta",
+            data:{
+                produtos:[]   
+            },
+            methods:{
+                created: function() {
+                fetch('https://api.myjson.com/bins/74l63').then(res => res.json()).then(json => {
+                    this.produtos = json.products})
+                alert("oi")
+                }
+        }
+        })
+
+    </script>
+
+</html>

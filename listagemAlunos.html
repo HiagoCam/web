@@ -9,11 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-    <input type="text" placeholder="Código" v-model="codg">
-    <input type="text" placeholder="Nome" v-model="name">
-    <button type="button" @click="salvar">salvar</button>
     <div id="app">
+        <input type="text" placeholder="Código" v-model="codg">
+        <input type="text" placeholder="Nome" v-model="name">
+        <input type="checkbox">
+        <button type="button" v-on:click="salvar">salvar</button>
         <h1>Relação de Alunos</h1>
+
         <table style="border: 1px solid grey;">
             <thead style="background-color: #dcdcdc;">
                 <th style="text-align: center;">Código</th>
@@ -30,7 +32,11 @@
                     </tr>
                 </td>
                 </tbody>
-
+                <tfoot>
+                    <tr v-if="alunos.length == 0">
+                        <td colspan="2">Nenhum aluno cadastrado</td>
+                    </tr>
+                </tfoot>
         </table>
         <!--<ul>
             <li v-for="aluno in alunos" style="list-style-type:armenian;">
@@ -63,13 +69,14 @@
                 },{
                     codigo: 6,
                     nome: "milani"
-                }]
+                }
+                ]
             },
                 methods:{
                     salvar: function() {
-                    this.alunos.push({codigo: this.codg,nome:this.name});
-                    this.alunos.refresh();
-                    alert("Adicionado com sucesso!");
+                    this.alunos.push({codigo: this.codg,nome:this.name})
+                    this.codg = ''
+                    this.name = ''
                 }
             }
         })

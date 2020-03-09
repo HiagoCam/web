@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="calculadora">
+        <input type="number" placeholder="Informe o primeiro numero" v-model="n1">
+        <br>
+        <br>
+        <input type="number" placeholder="Informe o segundo numero" v-model="n2">
+        <br>
+        <select id="listbox" v-model="oper">
+            <option>Somar</option>
+            <option>Subtrair</option>
+            <option>Dividir</option>
+            <option>Multiplicar</option>
+        </select>
+        <br>
+        <button @click="calcular">calcular</button>
+        <br>
+        <br>
+        <span style="font-style: italic; size: 32px; background-color: black; color: white;">{{ resultado }}</span>
+    </div>
+
+    <script>
+        let calculator = new Vue({
+            el:"#calculadora",
+            data:{
+                n1: 0,
+                n2: 0,
+                oper: '',
+                resultado: 0
+            }, 
+            methods:{
+            calcular: function(){
+                if(this.oper == "Somar"){
+                    this.resultado = Number(this.n1)+Number(this.n2); 
+                }
+                else if(this.oper == "Subtrair"){
+                    this.resultado = Number(this.n1)-Number(this.n2); 
+                }
+                else if(this.oper == "Dividir"){
+                    this.resultado = Number(this.n1)/Number(this.n2); 
+                }
+                else if(this.oper == "Multiplicar"){
+                    this.resultado = Number(this.n1)*Number(this.n2); 
+                }
+            } 
+            }
+
+        })
+    </script>
+
+</body>
+</html>
