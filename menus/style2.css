@@ -1,0 +1,70 @@
+body{
+    margin: 0px; 
+}
+
+#container{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.menu-superior{
+    padding: 0px;
+    margin: 0px;
+    background-color: black;
+    color: white;
+    width: 110px;
+    height: 150px;
+    justify-content: center;
+}
+
+.menu-superior li{
+    width: 110px;
+    list-style: none;
+    line-height: 30px;
+    text-align: left;
+}
+
+.menu-superior li:hover{
+    background-color: #e94e1b;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#caixa-maior{
+    flex-wrap: wrap;
+    display: flex;
+    position: absolute;
+    margin: 30px 40%;
+    width: 340px;
+    border-radius: 5px;
+    height: 340px;
+    background-color: white;
+}
+
+#titulo{
+    position: absolute;
+    background-color: #009584;
+    border-radius: 2px;
+    margin: 10px 40% ;
+    padding: 2px;
+}
+
+
+#caixas1{
+    position: absolute;
+    background-color: #00c27c;
+    margin: 1px;
+    border-radius: 3px;
+    width: 50%;
+    height: 50%;
+}
+
+#caixas2{
+    margin: 200px;
+    background-color: #00c27c;
+    border-radius: 3px;
+    width: 50%;
+    height: 50%;
+}

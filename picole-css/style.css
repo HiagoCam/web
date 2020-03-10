@@ -1,0 +1,84 @@
+html, body{
+    background-color: goldenrod;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#recheio{
+    display: flex;
+    background-color: rgb(243, 133, 182);
+    width: 220px;
+    height: 200px;
+    margin: 50px auto 0 auto;
+    border-top-left-radius: 170px;
+    border-top-right-radius: 170px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top: 7px solid rgb(244, 152, 189);
+    justify-content: center;
+    padding-top: 200px;
+    box-shadow: 8px 2px rgb(244, 152, 189);
+}
+
+#vareta{
+    background-color: rgb(235, 151, 96);
+    border-top: 6px solid rgb(219, 141, 81);
+    margin: auto;
+    width: 40px;
+    height: 90px;
+    border-bottom-left-radius: 170px;
+    border-bottom-right-radius: 170px;
+}
+.olhos{
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: rgb(232, 53, 145);
+}
+#boca{
+    width: 65px;
+    height: 28px;
+    margin-top: 58%;
+    background-color: rgb(232, 53, 145);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.iris{
+    width: 8px;
+    height: 8px;
+    margin: 20% 6px auto;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#mordida{
+    position: absolute;
+    margin: 0px;
+    height: 35px;
+    width: 60px;
+    background-color:rgb(252, 213, 213);
+    border-radius: 50%;
+    transform: rotate(30deg);
+    top: 80px;
+    right: 44%;
+}
+
+
+
+#lingua{
+    width: 20px;
+    height: 20px;
+    left: 49.3%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    background-color:  rgb(252, 213, 213);
+    position: absolute;
+}
+#lingua:hover{
+    display: none;
+}
