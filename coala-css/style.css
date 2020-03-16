@@ -1,0 +1,105 @@
+body{
+   margin: 0px;
+}
+#menu{
+    margin: 0px;
+    display: flex;
+    padding: 0px;
+    height: 60px;
+    width: 100%;
+    background-color: #FF7212;
+
+}
+#busca{
+    display: flex;
+    padding: 10px;
+    margin: 12px 0px 0px 15px;
+    font-style: italic;
+    font-size: 15px;
+    color: rgb(126, 126, 126);
+    text-align: left;
+    justify-content: center;
+    width: 190px;
+    border-radius: 60px;
+    border: 2px;
+    height: 18px;
+}
+#button-menu{
+    margin: 20px;
+    height: 20px;
+    width: 30px;
+}
+#lupa{
+    position: absolute;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    margin: 21px 0px 0px 268px;
+    height: 25px;
+    width: 23px;
+}
+
+#imgTerra{
+    position: absolute;
+    margin: 10px 0px 0px 40%;
+    height: 40px;
+}
+
+#contatos{
+    margin: 0px;
+    height: 40px;
+    text-align: right;
+    margin: 15px 0px 0px 35%;
+}
+
+.span1{
+    font-style: normal;
+    color: white;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+#risco{
+    height: 32px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.301);
+    margin: 18px 0px 0px 7px;
+}
+#itensDireita{
+    list-style: none;
+    margin: 20px 0px 0px 0px;
+}
+
+.fa{
+    color: white;
+}
+
+.lista li{
+    height: 40px;
+}
+
+#fundocoala{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(42, 59, 58);
+}
+
+#cabeca{
+    position: absolute;
+    background-color: turquoise;
+    height: 250px;
+    width: 250px;
+    margin: 75px 0px 0px 75px;
+    border-radius: 150px;
+}
+#orelhas{
+    position: absolute;
+    margin: 80px 0px 0px 3px;
+    height: 180px;
+    width: 180px;
+    background-color: rgb(199, 50, 50);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
