@@ -1,6 +1,12 @@
 body{
    margin: 0px;
 }
+#container{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 #menu{
     margin: 0px;
     display: flex;
@@ -8,21 +14,20 @@ body{
     height: 60px;
     width: 100%;
     background-color: #FF7212;
-
 }
 #busca{
     display: flex;
     padding: 10px;
-    margin: 12px 0px 0px 15px;
+    margin: 15px 0px 0px 20px;
     font-style: italic;
     font-size: 15px;
     color: rgb(126, 126, 126);
     text-align: left;
     justify-content: center;
+    height: 10px;
     width: 190px;
     border-radius: 60px;
     border: 2px;
-    height: 18px;
 }
 #button-menu{
     margin: 20px;
@@ -34,8 +39,8 @@ body{
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     background-color: white;
-    margin: 21px 0px 0px 268px;
-    height: 25px;
+    margin: 21px 0px 0px 300px;
+    height: 23px;
     width: 23px;
 }
 
@@ -58,48 +63,224 @@ body{
     font-size: 13px;
     font-family: sans-serif;
 }
+
 #risco{
     height: 32px;
     width: 1px;
     background-color: rgba(255, 255, 255, 0.301);
     margin: 18px 0px 0px 7px;
 }
-#itensDireita{
+
+#itensDireita li{
+    width: 30px;
     list-style: none;
-    margin: 20px 0px 0px 0px;
+    text-align: left;
+    margin: 7px 0px 0px 0px;
 }
 
 .fa{
     color: white;
 }
 
-.lista li{
-    height: 40px;
-}
 
 #fundocoala{
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
     width: 400px;
     height: 400px;
-    background-color: rgb(42, 59, 58);
+    background-color: rgb(42, 153, 163);
 }
 
 #cabeca{
+    display: flex;
     position: absolute;
-    background-color: turquoise;
+    margin-top: 75px;
+    background: #A6BECF;
     height: 250px;
     width: 250px;
-    margin: 75px 0px 0px 75px;
     border-radius: 150px;
 }
+
 #orelhas{
-    position: absolute;
-    margin: 80px 0px 0px 3px;
-    height: 180px;
-    width: 180px;
-    background-color: rgb(199, 50, 50);
+    margin: 90px auto;
+    height: 160px;
+    width: 160px;
+    background: #A6BECF;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
 }
 
+#orelhas-sombra{
+    margin: 15px auto;
+    height: 128px;
+    width: 128px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background: #819CAF;
+}
+
+#nariz{
+    position: absolute;
+    margin: 112px 0px 0px 85px;
+    background: #BE845F;
+    height: 106px;
+    width: 72px;
+    border-radius: 40px;
+}
+
+#olho1{
+    position: absolute;
+    background-color: white;
+    margin: 60px 0px 0px 118px;
+    height: 90px;
+    width: 85px;
+    border-radius: 45px;
+}
+
+#olho2{
+    position: absolute;
+    background-color: white;
+    margin: 60px 0px 0px 42px;
+    height: 85px;
+    width: 80px;
+    border-radius: 45px;
+}
+
+
+#iris{
+    position: absolute;
+    margin: 32px 0px 0px 30px;
+    background-color: rgb(11, 1, 34);
+    height: 28px;
+    width: 28px;
+    border-radius: 30px;
+}
+
+#cabelo1{
+    position: absolute;
+    display: flex;
+    width: 40px;
+    height: 30px;
+    background:  #A6BECF;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin: 65px 0px 0px 22px;
+}
+#cabelo2{
+    position: absolute;
+    display: flex;
+    width: 40px;
+    height: 30px;
+    background:  #A6BECF; 
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin: 58px 0px 0px -25px;
+}
+
+
+#artigo{
+    display: flex;
+    width: 550px;
+    height: 295px;
+}
+
+.box-artigo{
+    border: 1px solid rgba(0, 0, 0, 0.191);
+    display: flex;
+    margin: 20px 0px 0px 15px;
+    height: 140px;
+    width: 260px;
+}
+
+#box-artigos2{
+    border: 1px solid rgba(0, 0, 0, 0.191);
+    display: flex;
+    position: absolute;
+    margin: 175px 0px 0px 15px;
+    height: 140px;
+    width: 260px;
+}
+
+#box-artigos3{
+    border: 1px solid rgba(0, 0, 0, 0.191);
+    display: flex;
+    position: absolute;
+    margin: 175px 0px 0px 290px;
+    height: 140px;
+    width: 260px;
+
+}
+
+#imagem1{
+    display: flex;
+    position: absolute;
+    background-image: url(imagemAlert.jpg);
+    height: 140px;
+    width: 130px;
+}
+#imagem2{
+    display: flex;
+    position: absolute;
+    background-image: url(imagem2.jpg);
+    height: 140px;
+    width: 130px;
+}
+
+#imagem3{
+    display: flex;
+    position: absolute;
+    background-image: url(imagem3.jpg);
+    height: 140px;
+    width: 130px;
+}
+
+#imagem4{
+    display: flex;
+    position: absolute;
+    background-image: url(imagem4.jpg);
+    height: 140px;
+    width: 130px;
+}
+
+
+#h4-1{
+    position: absolute;
+    margin: 10px;
+    font-size: 12px;
+    color: red;
+}
+#h4-2{
+    position: absolute;
+    margin: 10px;
+    font-size: 12px;
+    color: rgb(67, 165, 173);
+}
+#h4-01{
+    position: absolute;
+    margin: 30px 0px 0px 133px;
+}
+.titulo{
+    position: absolute;
+    margin: 0px 0px 0px 130px;
+}
+
+
+.h4-text{
+    position: absolute;
+    margin: 45px 0px 0px 10px;
+    width: 115px;
+    height: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.767);
+}
+#lblMenu{
+    margin: 22px 0px 0px -12px;
+    color: white;
+    font-weight: normal;
+}
